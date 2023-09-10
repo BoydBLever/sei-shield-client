@@ -1,8 +1,11 @@
-import SearchBar from './Searchbar';
-import { Box } from '@chakra-ui/react';
+import SearchBar from '../components/Searchbar';
+import SellerPage from './SellerPage'
+import { Box, Flex, Image } from '@chakra-ui/react';
 import styled from 'styled-components';
-import SeiConnectWallet from './SeiConnectWallet';
+import SeiConnectWallet from '../components/SeiConnectWallet';
 import { SeiWalletProvider } from '@sei-js/react';
+import SeiShield from '../components/images/SeiShieldLogo.png'
+import CreateContract from '../components/CreateContract';
 
 const CustomBox = styled(Box)`
   display: flex;
@@ -11,11 +14,6 @@ const CustomBox = styled(Box)`
   align-items: center;
   height: 100vh;
 
-  h1 {
-    margin: 10px;
-    font-weight: 400;
-    font-size: 30px;
-  }
 `;
 
 const Home = () => {
@@ -25,8 +23,11 @@ const Home = () => {
 
   return (
     <CustomBox>
-      <h1>Sei Guardian</h1>
-      <SearchBar onSearch={handleSearch} />
+      <Box margin="20px">
+        <Image boxSize='200px' src={SeiShield} alt='Sei Logo' />
+      </Box>
+      {/* <CreateContract /> */}
+      {/* <SearchBar onSearch={handleSearch} /> */}
       <SeiWalletProvider
         chainConfiguration={{
           chainId: 'atlantic-2',

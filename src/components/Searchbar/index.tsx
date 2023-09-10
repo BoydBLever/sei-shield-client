@@ -74,7 +74,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
           )}
           <InputRightAddon p={0} border='none'>
             <StyledButton size='lg'>
-              <Search2Icon color='blue.600' />
+              <Search2Icon color='teal.600' />
             </StyledButton>
           </InputRightAddon>
         </InputGroup>
